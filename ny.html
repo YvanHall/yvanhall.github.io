@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>心动学院</title>
+    <link rel="stylesheet" href="./css/ny.css">
+</head>
+<body>
+    <div class="nav">
+        <ul class="nav-ul">
+            <li class="nav-btn" data-index="0">首页</li>
+            <li class="nav-btn" data-index="1">游戏简介</li>
+            <li class="nav-btn" data-index="2">玩法特色</li>
+            <li class="nav-btn" data-index="3">游戏攻略</li>
+            <li class="nav-btn" data-index="4">常见问题</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <div class="page">
+            <div class="content tl">
+                <br/><br/><br/><br/><br/>
+                《心动学院》2020年青春美女校园卡牌手游《心动学院》粉墨登场，被赐予心动之力的你，与校花们来场零距离的冒险之旅，在充满艳遇和幻想的校园中尽情享受每一场别致的邂逅吧<br/>
+            </div>
+            <div class="content tl">
+                <br/><br/><br/><br/><br/> 
+                ◆校花云集 <br/> 心动学院校花云集，百位校花随心挑选 <br/> ◆校花约会 <br/> 
+                开启与校花的艳遇之旅，每日解锁新的姿势 <br/>◆二十连抽 <br/> 
+                登录免费二十连抽，海量福利打破氪金宿命 <br/>◆真人写真 <br/> 
+                校花专属真人写真，打破跟她的次元壁<br/>
+            </div>
+            <div class="content tl">
+                <br/><br/><br/><br/><br/>
+                主界面-角色
+                角色基础入口：<br/>
+主界面-角色-基础<br/>
+
+角色名称、展示图片、资质、属性和简介构成<br/>
+
+角色分为攻击型、防御型、技巧型三种<br/>
+
+每名角色有专属的技能。<br/>
+
+角色基本属性：经验、等级、品质、血量、攻击、防御、星级、技能。<br/>
+
+经验——角色经验通过PVE（主要PVE是关卡系统、日常系统）<br/>使用经验道具获得，经验满时自动升级<br/>
+
+等级——经验满值后提升一级，不能超过玩家等级，达到该限定情况时，不再获得经验值。<br/>
+
+血量——战斗中血量为零则视为失败，退出该场战斗，血量扣除由对方攻击减去己方防御计算<br/>
+
+攻击——战斗中对敌方造成伤害的属性<br/>
+
+防御——战斗中降低敌方对自己伤害的属性<br/>
+
+技能——每个角色带有四个主动技能、两个被动技能<br/>
+            </div>
+            <div class="content tl">
+                <br/><br/><br/><br/><br/>
+                一、登录异常<br/><br/>
+                1、游戏未开测or维护<br/>
+                在开始游戏的时候如果遇到了无法登录的问题，小湖建议大家首先检查一下游戏的运营状态，心动学院这款游戏目前还处于测试当中，于9月26日在安卓端开启了全渠道删档测试。小伙伴遇到登不上去游戏的情况，那基本上就是测试已经结束的缘故了，因为游戏在没有开测的时候、以及维护状态下是不能进行登录的。<br/>
+                对于游戏没有开测上线或者维护造成的无法登录问题，解决方法就比较粗暴简单了，大家只能等游戏再次开测，或者等待游戏官方结束维护状态，就可以再次进入游戏了。<br/>
+                2、游戏包问题<br/>
+                尽管心动学院这款游戏此次的删档测试已经结束了，但它后面还会公测以及正式上线，如果小伙伴们在公测上线的情况下遇到了登不上去游戏的问题，那么小湖就建议大家对于自己下载的游戏包体要好好检查一番了。<br/>
+                这种情况一般主要是游戏包的问题，可能是游戏包下载的渠道不规范，至于解决方法，小湖推荐大家可以去比较正规的渠道下载游戏安装包，比如九游平台等。<br/>
+                以上就是关于心动学院为什么登不上去、无法登录的解决方法分享，小伙伴们如果遇到了此类登录问题可以参考上述方法进行自检解决。<br/>
+            </div>
+        </div>
+    </div>
+<script src="js/jquery.js"></script>
+<script>
+var btngroup = document.querySelectorAll('.nav-btn');
+var pagegroup = document.querySelectorAll('.content');
+var pageIndex ;
+init();
+function init(){
+    for(var i=0;i<btngroup.length;i++)
+    {
+        btngroup[i].addEventListener('click',Navclick);
+    }
+    /*检查参数*/
+    var urlQuare=GetQueryString('page');
+    if(urlQuare){
+        pageIndex= parseInt(urlQuare);
+    }
+    else
+    {
+        pageIndex=1;
+    }
+    btngroup[pageIndex].className = 'nav-btn active';
+    pagegroup[pageIndex-1].style.display = 'block';
+}
+function Navclick(e){
+    var mc = e.currentTarget;
+    if(mc.dataset.index==0)
+    {
+        window.location.href = './index.html'
+    }
+    else
+    {
+        btngroup[pageIndex].className = 'nav-btn';
+        pagegroup[pageIndex-1].style.display = 'none';
+
+        pageIndex=mc.dataset.index;
+        btngroup[pageIndex].className = 'nav-btn active';
+        pagegroup[pageIndex-1].style.display = 'block';
+
+        window.history.pushState({status: 0} ,'' ,'?page='+pageIndex);
+    }
+}
+
+function GetQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);//search,查询？后面的参数，并匹配正则
+    if (r != null) return unescape(r[2]);
+    return null;
+}
+
+
+</script>
+</body>
+</html>

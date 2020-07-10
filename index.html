@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>心动学院</title>
+    <link rel="stylesheet" href="./css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="./css/web.css">
+</head>
+<body>
+    <div class="meum-tab" style="display: block;">
+        <ul>
+            <li class="meum-li" data-index="0">
+                <img class="meum-btn-icon" src="./img/icon/home.png" />
+                <span>首页</span>
+            </li>
+            <li class="meum-li" data-index="1">
+                    <img class="meum-btn-icon" src="./img/icon/yxjj.png" />
+                    <span>游戏简介</span>
+            </li>
+            <li class="meum-li" data-index="2">
+                <img class="meum-btn-icon" src="./img/icon/wfts.png" />
+                <span>玩法特色</span>
+            </li>
+            <li class="meum-li" data-index="3">
+                <img class="meum-btn-icon" src="./img/icon/yxgl.png" />
+                <span>游戏攻略</span>
+            </li>
+            <li class="meum-li" data-index="4">
+                <img class="meum-btn-icon" src="./img/icon/cjwt.png" />
+                <span>常见问题</span>
+            </li>
+
+        </ul>
+    </div>
+    <div class="download" style="display: block;">
+        <img class="gametitle" src="./img/icon.png"/>
+        <img class="downloadcode" src="./img/code.png"/>
+        <div class="mask">敬请期待</div>
+        <img class="subscribe" src="./img/sub.png"/>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="page1">
+                    <img class="blank" src="./img/blank.png"/>
+        </div>
+    <div>
+        <img class="title" src="./img/title.png" />
+    </div>
+        <div class="page2">
+            <ul class="page2-ul">
+                <li class="page2-btn" data-index="1">
+                    <img class="page2-btn-icon" src="./img/icon/4.png" />
+                    <span >游戏简介</span>
+                </li>
+                <li class="page2-btn" data-index="2">
+                    <img class="page2-btn-icon" src="./img/icon/3.png" />
+                    <span>玩法特色</span>
+                </li>
+                <li class="page2-btn" data-index="3">
+                    <img class="page2-btn-icon" src="./img/icon/2.png" />
+                    <span>游戏攻略</span>
+                </li>
+                <li class="page2-btn" data-index="4">
+                    <img class="page2-btn-icon" src="./img/icon/1.png" />
+                    <span>常见问题</span>
+                </li>
+            </ul>
+        </div>
+        <div class="page3">
+            <div class="page3-title">
+                <span>游戏锦集</span>
+            </div>
+            <div class="page3-swripe">
+                <div class="swiper-container">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <img src="./img/pic1.jpg" alt="">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="./img/pic2.jpg" alt="">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="./img/pic3.jpg" alt="">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="./img/pic4.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div class="btLeft btnlr"></div>
+                <div class="btRight btnlr"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="foot">
+        <div class="foot-bottom">
+            <div class="foot-logo bgimg"></div>
+            <div class="foot-right">
+                <p>
+                M.o.b Technologies AS | 批准文号：国新出审[2020]2914 号 | 出版物号：ISBN 721-1-357-32161-9
+                </br>
+                联系我们：(010)92177597 | 联系邮箱：contactcmob@hotmail.com
+                </br>
+                文化部网络游戏举报和联系电子邮箱：wlwh@vip.sina.com | 纠纷处理方式：联系客服或依《<a href="./agreement.html" target="_blank" style="color:red">用户服务协议</a>》约定方式处理
+                </br>
+                抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</br></br>
+                </p>
+            </div>
+        </div>
+    </div>
+<script src="js/jquery.js"></script>
+<script src="js/swiper-3.4.2.min.js"></script>
+<script>
+    var btngroup = document.querySelectorAll('.meum-li');
+    var Quickbtngroup = document.querySelectorAll('.page2-btn');
+
+    init();
+    function init(){
+        for(var i=0;i<btngroup.length;i++)
+        {
+            btngroup[i].addEventListener('click',Navclick);
+        }
+        for(var j=0;j<Quickbtngroup.length;j++)
+        {
+            Quickbtngroup[j].addEventListener('click',Navclick);
+        }
+    }
+    function Navclick(e){
+        var mc = e.currentTarget;
+        console.log(mc)
+        console.log(mc.dataset.index);
+        if(mc.dataset.index==0)
+        {
+            window.location.href = './index.html'
+        }else if(mc.dataset.index==-1){
+            return;
+        }
+        else {
+            window.location.href = './ny.html?page='+mc.dataset.index;
+        }
+
+    }
+        window.onload = function(){
+            var swiper = new Swiper('.swiper-container', {
+                speed: 500,
+                autoplay:4000,
+                preventIntercationOnTransition: true,//过度中 禁止操作
+                autoplayDisableOnInteraction: false,//操作是否暂停自动播放
+                effect: 'coverflow',
+                grabCursor: true,//鼠标手型
+                centeredSlides: true,
+                slidesPerView:'auto',//
+                loop: true,
+                loopAdditionalSlides: 0, // 2
+                nextButton: '.btRight',
+                prevButton: '.btLeft',
+
+                coverflow: {
+                    rotate: 0,
+                    stretch: 10, // 0
+                    depth: 200,
+                    modifier: 1,
+                    slideShadows: true
+                }
+            });
+            var bodyW=(document.querySelector('html').scrollWidth);
+        }
+        window.onresize=function(){
+            var bodyW=(document.querySelector('html').scrollWidth);
+        }
+</script>
+<script>
+    var download = document.getElementsByClassName('subscribe')[0];
+    download.addEventListener('click', function () {
+        alert('敬请期待')
+    })
+</script>
+</body>
+</html>

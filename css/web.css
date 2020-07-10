@@ -1,0 +1,298 @@
+html {
+    /*font-size: 100px;*/
+    font-family: "Hannotate SC";
+    background-color: #FFFFFF;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    width: 100%;
+    height: 100%
+
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+body {
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    height: 100%;
+    width: 100%;
+    font-size: 0.14rem;
+    position: relative;
+    min-width: 1300px;
+}
+img {
+    display: block;
+}
+ul, li {
+    list-style: none;
+}
+.bgimg{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.foot{
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    padding-top: 10px;
+}
+.foot-fg{
+    margin: 0 10px;
+}
+
+.foot-logo{
+    margin-top: -20px;
+    margin-left: -50px;
+    width: 220px;
+    height: 150px;
+    background-image: url("../img/logo.png");
+    float: left;
+}
+.foot-right{
+    color: black;
+    margin-top: 6px;
+    width: 700px;
+    height: 50px;
+    float: right;
+    line-height: 20px;
+}
+.foot-right p {
+    font-size: 12px;
+    color:black;
+}
+.foot-bottom{
+    width: 920px;
+    margin:10px auto;
+}
+.download{
+    width:200px;
+    height: 460px;
+    position: fixed;
+    z-index: 9;
+    top: 60px;
+    right: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 2px;
+}
+.gametitle {
+    width:196px;
+    height: auto;
+    padding: 20px;
+}
+.downloadcode {
+    width: 190px;
+    height: 190px;
+}
+.mask {
+    position: absolute;
+    top: 64%;
+    transform: translateY(-50%);
+    width: 190px;
+    height: 190px;
+    left:3px;
+    line-height: 213px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 20px;
+}
+.subscribe {
+    margin-left: 5px;
+    width: 180px;
+    height: auto;
+}
+
+.meum-tab{
+    width:200px;
+    height: 280px;
+    position: fixed;
+    z-index: 9;
+    top: 60px;
+    left: 20px;
+    background-color: #ffffff;
+    padding:10px 20px;
+    border-radius: 5px;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 2px;
+}
+.meum-li{
+    height: 50px;
+    line-height: 50px;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.meum-li:hover{
+    background-color: rgba(0,0,0,0.1);
+    color: black;
+    border-radius: 5px;
+    animation-name: bounce;
+    animation-duration: 0.5s;
+
+}
+.meum-btn-icon{
+    display: inline;
+    margin-left: 15px;
+    width: 24px;
+    height: 24px;
+    background-size:contain ;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+.meum-li span{
+    vertical-align: middle;
+    line-height: 40px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.title {
+    top: 20%;
+    width:600px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.wrap{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin:0 auto;
+    background-size: 100% ;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-image:url("../img/bg.jpg");
+    /*min-width: 1400px;*/
+    max-width: 1700px;
+}
+.page1{
+    position: relative;
+    left: 50%;
+    width: 500px;
+    transform: translateX(-50%);
+}
+.page1-wrap{
+    width: 500px;
+    padding: 30px 30px;
+    background-color: rgba(255,255,255,0.8);
+    color: black;
+    border-radius: 20px;
+}
+.blank{
+    width:800px;
+    height:600px;
+}
+.page2{
+    top: 35%;
+    width: 900px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.page2-btn-icon{
+    display: inline;
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+}
+.page2-btn{
+    padding: 8px 8px;
+    cursor: pointer;
+    list-style: none;
+    width: 448px;
+    display: inline-block;
+    text-align: center;
+    margin: 10px 0;
+}
+.page2-btn:hover{
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    animation-name: bounce;
+    animation-duration: 0.5s;
+}
+.fgf{
+    margin: 0 20px;
+}
+.page2-btn span{
+    line-height: 60px;
+    height: 60px;
+    color: black;
+    font-size: 24px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.page3{
+    margin-top: 250px;
+    height: auto;
+}
+.page3-title{
+    border-radius: 50px;
+    width: 180px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(255,255,255,0.4);
+    position: relative;
+}
+.page3-title span{
+    line-height: 60px;
+    height: 60px;
+    color: white;
+    font-size: 24px;
+    vertical-align: middle;
+}
+.page3-swripe{
+    margin: 40px auto;
+    width: 1000px;
+    height: 600px;
+}
+.page3-wrap-line{
+    position: absolute;
+    width: 520px;
+    border-top:1px solid #999;
+}
+.swiper-slide{
+    width:300px;
+    height: 500px;
+}
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    } 50% {
+        transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+    } 100% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
